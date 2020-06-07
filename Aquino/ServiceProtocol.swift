@@ -11,12 +11,12 @@ import Foundation
 public typealias Parameters = [String: Any]
 public typealias HTTPHeaders = [String: String]
 
-enum HttpMethod: String {
+public enum HttpMethod: String {
     case get = "GET"
     case post = "POST"
 }
 
-enum HttpTask {
+public enum HttpTask {
     case request
     case requestUrlParameters(urlParameters: Parameters)
     case requestBodyParameters(bodyParameters: Parameters)
@@ -27,13 +27,13 @@ enum HttpTask {
                                      additionalHeaders: HTTPHeaders)
 }
 
-enum Result<T> {
+public enum Result<T> {
     case success(T, URLResponse?)
     case failure(Error)
     case empty
 }
 
-protocol ServiceProtocol {
+public protocol ServiceProtocol {
     var scheme: String { get }
     var host: String { get }
     var path: String { get }

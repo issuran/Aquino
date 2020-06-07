@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5207088E248C4BCF008C9150 /* Aquino.h in Headers */ = {isa = PBXBuildFile; fileRef = 5207088C248C4BCF008C9150 /* Aquino.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52282378248C4DBF00E8CA58 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D11C05248C4D3600B1D93E /* ServiceError.swift */; };
-		52282379248C4DBF00E8CA58 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D11C04248C4D3600B1D93E /* ParameterEncoder.swift */; };
-		52D11C06248C4D3600B1D93E /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D11C01248C4D3600B1D93E /* ServiceProvider.swift */; };
-		52D11C07248C4D3600B1D93E /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D11C02248C4D3600B1D93E /* ServiceProtocol.swift */; };
+		52920A63248D47E700F3A297 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A60248D47E600F3A297 /* Provider.swift */; };
+		52920A64248D47E700F3A297 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A61248D47E700F3A297 /* ServiceProtocol.swift */; };
+		52920A67248D47EA00F3A297 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A66248D47EA00F3A297 /* ServiceError.swift */; };
+		52920A68248D47EA00F3A297 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A65248D47EA00F3A297 /* ParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52070889248C4BCF008C9150 /* Aquino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aquino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5207088C248C4BCF008C9150 /* Aquino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aquino.h; sourceTree = "<group>"; };
 		5207088D248C4BCF008C9150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52D11C01248C4D3600B1D93E /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
-		52D11C02248C4D3600B1D93E /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
-		52D11C04248C4D3600B1D93E /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
-		52D11C05248C4D3600B1D93E /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		52920A60248D47E600F3A297 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		52920A61248D47E700F3A297 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		52920A65248D47EA00F3A297 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		52920A66248D47EA00F3A297 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,22 +54,14 @@
 		5207088B248C4BCF008C9150 /* Aquino */ = {
 			isa = PBXGroup;
 			children = (
-				52D11C03248C4D3600B1D93E /* Encoder */,
-				52D11C02248C4D3600B1D93E /* ServiceProtocol.swift */,
-				52D11C01248C4D3600B1D93E /* ServiceProvider.swift */,
+				52920A65248D47EA00F3A297 /* ParameterEncoder.swift */,
+				52920A66248D47EA00F3A297 /* ServiceError.swift */,
+				52920A60248D47E600F3A297 /* Provider.swift */,
+				52920A61248D47E700F3A297 /* ServiceProtocol.swift */,
 				5207088C248C4BCF008C9150 /* Aquino.h */,
 				5207088D248C4BCF008C9150 /* Info.plist */,
 			);
 			path = Aquino;
-			sourceTree = "<group>";
-		};
-		52D11C03248C4D3600B1D93E /* Encoder */ = {
-			isa = PBXGroup;
-			children = (
-				52D11C04248C4D3600B1D93E /* ParameterEncoder.swift */,
-				52D11C05248C4D3600B1D93E /* ServiceError.swift */,
-			);
-			path = Encoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +107,7 @@
 				TargetAttributes = {
 					52070888248C4BCF008C9150 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -151,10 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52282378248C4DBF00E8CA58 /* ServiceError.swift in Sources */,
-				52D11C06248C4D3600B1D93E /* ServiceProvider.swift in Sources */,
-				52282379248C4DBF00E8CA58 /* ParameterEncoder.swift in Sources */,
-				52D11C07248C4D3600B1D93E /* ServiceProtocol.swift in Sources */,
+				52920A67248D47EA00F3A297 /* ServiceError.swift in Sources */,
+				52920A63248D47E700F3A297 /* Provider.swift in Sources */,
+				52920A68248D47EA00F3A297 /* ParameterEncoder.swift in Sources */,
+				52920A64248D47E700F3A297 /* ServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +277,7 @@
 		52070892248C4BCF008C9150 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = X9469P8892;
@@ -300,6 +294,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.oliveira.Aquino;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -308,6 +303,7 @@
 		52070893248C4BCF008C9150 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = X9469P8892;

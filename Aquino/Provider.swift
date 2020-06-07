@@ -1,22 +1,22 @@
 //
-//  ServiceProvider.swift
+//  Provider.swift
 //  Horoscopo
 //
-//  Created by Tiago Oliveira on 24/01/20.
+//  Created by Tiago Oliveira on 07/06/20.
 //  Copyright © 2020 Tiago Oliveira. All rights reserved.
 //
 
 import Foundation
 
-class ServiceProvider<T: ServiceProtocol> {
+open class Provider {
     var urlSession = URLSession.shared
     var task: URLSessionDataTask?
     
-    init() { }
+    public init() { }
     
-    func execute(service: T, completion: @escaping (Result<Data>) -> Void) throws {
+    public func execute(endpoint: ServiceProtocol, completion: @escaping (Result<Data>) -> Void) throws {
         do {
-            let request = try service.urlRequest()
+            let request = try endpoint.urlRequest()
             task = urlSession.dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     completion(.failure(error))
@@ -32,7 +32,7 @@ class ServiceProvider<T: ServiceProtocol> {
         }
     }
     
-    func stopRequestOnGoing() {
+    public func stopRequestOnGoing() {
         if let task = task {
             task.cancel()
         }
