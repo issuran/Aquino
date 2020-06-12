@@ -12,9 +12,11 @@
 		52920A64248D47E700F3A297 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A61248D47E700F3A297 /* ServiceProtocol.swift */; };
 		52920A67248D47EA00F3A297 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A66248D47EA00F3A297 /* ServiceError.swift */; };
 		52920A68248D47EA00F3A297 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A65248D47EA00F3A297 /* ParameterEncoder.swift */; };
+		AA2BD45C00B924DFB3D4436F /* Pods_Aquino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B834E91D358019DC0CC521 /* Pods_Aquino.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C44DB7A6FEAF95FEAE850FD /* Pods-Aquino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquino.debug.xcconfig"; path = "Target Support Files/Pods-Aquino/Pods-Aquino.debug.xcconfig"; sourceTree = "<group>"; };
 		52070889248C4BCF008C9150 /* Aquino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aquino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5207088C248C4BCF008C9150 /* Aquino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aquino.h; sourceTree = "<group>"; };
 		5207088D248C4BCF008C9150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		52920A61248D47E700F3A297 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		52920A65248D47EA00F3A297 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		52920A66248D47EA00F3A297 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		B2B834E91D358019DC0CC521 /* Pods_Aquino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aquino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4E74EC60B010046C2110D8E /* Pods-Aquino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquino.release.xcconfig"; path = "Target Support Files/Pods-Aquino/Pods-Aquino.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2BD45C00B924DFB3D4436F /* Pods_Aquino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				5207088B248C4BCF008C9150 /* Aquino */,
 				5207088A248C4BCF008C9150 /* Products */,
+				EAEA2356753DAC914D8C8A6E /* Pods */,
+				D18CBFFB4BEF6F25195A7C1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = Aquino;
 			sourceTree = "<group>";
 		};
+		D18CBFFB4BEF6F25195A7C1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2B834E91D358019DC0CC521 /* Pods_Aquino.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAEA2356753DAC914D8C8A6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C44DB7A6FEAF95FEAE850FD /* Pods-Aquino.debug.xcconfig */,
+				C4E74EC60B010046C2110D8E /* Pods-Aquino.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -82,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52070891248C4BCF008C9150 /* Build configuration list for PBXNativeTarget "Aquino" */;
 			buildPhases = (
+				A0435E690CF6A59AE2127868 /* [CP] Check Pods Manifest.lock */,
 				52070884248C4BCF008C9150 /* Headers */,
 				52070885248C4BCF008C9150 /* Sources */,
 				52070886248C4BCF008C9150 /* Frameworks */,
@@ -138,6 +164,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0435E690CF6A59AE2127868 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aquino-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52070885248C4BCF008C9150 /* Sources */ = {
@@ -278,6 +329,7 @@
 		};
 		52070892248C4BCF008C9150 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C44DB7A6FEAF95FEAE850FD /* Pods-Aquino.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +358,7 @@
 		};
 		52070893248C4BCF008C9150 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4E74EC60B010046C2110D8E /* Pods-Aquino.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
