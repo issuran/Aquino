@@ -14,16 +14,17 @@ open class Provider {
     
     public init() { }
     
-    public func execute(endpoint: ServiceProtocol, completion: @escaping (Result<Data>) -> Void) throws {
+    public func execute<T: Decodable>(endpoint: ServiceProtocol, completion: @escaping (Result<T, Error>) -> Void) throws {
         do {
             let request = try endpoint.urlRequest()
             task = urlSession.dataTask(with: request) { (data, response, error) in
-                if let error = error {
-                    completion(.failure(error))
-                } else if let data = data {
-                    completion(.success(data, response))
-                } else {
-                    completion(.empty)
+                Decoder.decode(model: T.self, data: data, response: response, error: error) { (result) in
+                    switch result {
+                    case .success(let data):
+                        completion(.success(data))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
                 }
             }
             task?.resume()
