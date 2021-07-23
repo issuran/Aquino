@@ -27,12 +27,6 @@ public enum HttpTask {
                                      additionalHeaders: HTTPHeaders)
 }
 
-//public enum Result<T> {
-//    case success(T)
-//    case failure(Error)
-//    case empty
-//}
-
 public protocol ServiceProtocol {
     var scheme: String { get }
     var host: String { get }
