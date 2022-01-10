@@ -103,4 +103,22 @@ open class Provider {
         
         return completion(.success(result))
     }
+    
+    func downloadImage(from url: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        guard let urlPath = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: urlPath) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+            }
+            
+            guard let data = data else {
+                completion(.failure(NSError(domain: "Not valid result", code: 999, userInfo: nil)))
+                return
+            }
+            
+            completion(.success(data))
+            
+        }.resume()
+    }
 }

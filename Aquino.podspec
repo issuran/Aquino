@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Aquino"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "Aquino Networking."
   spec.description  = "Aquino is a network framework for tests."
   spec.homepage     = "https://github.com/issuran/Aquino"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Tiago Oliveira" => "tiago_fernandes89@hotmail.com" }
-  spec.platform     = :ios, "12.0"
+  spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/issuran/Aquino.git", :tag => "1.0.3" }
   spec.source_files = "Aquino/**/*"
   
