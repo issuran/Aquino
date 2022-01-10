@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Tiago Oliveira" => "tiago_fernandes89@hotmail.com" }
   spec.platform     = :ios, "13.0"
-  spec.source       = { :git => "https://github.com/issuran/Aquino.git", :tag => "1.0.3" }
+  spec.source       = { :git => "https://github.com/issuran/Aquino.git", :tag => "1.0.4" }
   spec.source_files = "Aquino/**/*"
   
   spec.exclude_files = "Aquino/**/*.plist"
