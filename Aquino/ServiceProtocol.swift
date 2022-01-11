@@ -1,6 +1,6 @@
 //
 //  ServiceProtocol.swift
-//  Horoscopo
+//  Aquino
 //
 //  Created by Tiago Oliveira on 24/01/20.
 //  Copyright © 2020 Tiago Oliveira. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  Provider.swift
-//  Horoscopo
+//  Aquino
 //
 //  Created by Tiago Oliveira on 07/06/20.
 //  Copyright © 2020 Tiago Oliveira. All rights reserved.
@@ -104,7 +104,7 @@ open class Provider {
         return completion(.success(result))
     }
     
-    func downloadImage(from url: String, completion: @escaping (Result<Data, Error>) -> Void) {
+    public func downloadImage(from url: String, completion: @escaping (Result<Data, Error>) -> Void) {
         guard let urlPath = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: urlPath) { data, response, error in
