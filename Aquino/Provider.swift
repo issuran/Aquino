@@ -9,21 +9,25 @@
 import Foundation
 
 open class Provider {
-    var urlSession = URLSession.shared
+    var urlSession: URLSessionProtocol!
     var task: URLSessionDataTask?
     
-    public init() { }
+    public init(_ urlSession: URLSessionProtocol = URLSession.shared) {
+        self.urlSession = urlSession
+    }
     
     public func execute<T: Decodable>(model: T.Type, endpoint: ServiceProtocol, completion: @escaping (Result<T, Error>) -> Void) throws {
         do {
             let request = try endpoint.urlRequest()
             task = urlSession.dataTask(with: request) { (data, response, error) in
-                self.middleware(model: model, data: data, response: response, error: error) { (result) in
-                    switch result {
-                    case .success(let data):
-                        completion(.success(data))
-                    case .failure(let error):
-                        completion(.failure(error))
+                DispatchQueue.main.async {
+                    self.middleware(model: model, data: data, response: response, error: error) { (result) in
+                        switch result {
+                        case .success(let data):
+                            completion(.success(data))
+                        case .failure(let error):
+                            completion(.failure(error))
+                        }
                     }
                 }
             }

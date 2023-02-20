@@ -12,6 +12,10 @@
 		52920A64248D47E700F3A297 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A61248D47E700F3A297 /* ServiceProtocol.swift */; };
 		52920A67248D47EA00F3A297 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A66248D47EA00F3A297 /* ServiceError.swift */; };
 		52920A68248D47EA00F3A297 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A65248D47EA00F3A297 /* ParameterEncoder.swift */; };
+		52DA1D6929A40F3200CAAB31 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA1D6829A40F3200CAAB31 /* URLSessionProtocol.swift */; };
+		52DA1D6B29A4109100CAAB31 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA1D6A29A4109100CAAB31 /* URLSessionDataTaskProtocol.swift */; };
+		52DA1D6D29A410AD00CAAB31 /* URLSessionDataTask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA1D6C29A410AD00CAAB31 /* URLSessionDataTask+Extension.swift */; };
+		52DA1D6F29A410BD00CAAB31 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA1D6E29A410BD00CAAB31 /* URLSession+Extension.swift */; };
 		AA2BD45C00B924DFB3D4436F /* Pods_Aquino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B834E91D358019DC0CC521 /* Pods_Aquino.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +28,10 @@
 		52920A61248D47E700F3A297 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		52920A65248D47EA00F3A297 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		52920A66248D47EA00F3A297 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		52DA1D6829A40F3200CAAB31 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		52DA1D6A29A4109100CAAB31 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		52DA1D6C29A410AD00CAAB31 /* URLSessionDataTask+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+Extension.swift"; sourceTree = "<group>"; };
+		52DA1D6E29A410BD00CAAB31 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		B2B834E91D358019DC0CC521 /* Pods_Aquino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aquino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E74EC60B010046C2110D8E /* Pods-Aquino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aquino.release.xcconfig"; path = "Target Support Files/Pods-Aquino/Pods-Aquino.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +69,7 @@
 		5207088B248C4BCF008C9150 /* Aquino */ = {
 			isa = PBXGroup;
 			children = (
+				52DA1D6729A40F2600CAAB31 /* Protocol */,
 				52920A60248D47E600F3A297 /* Provider.swift */,
 				52920A65248D47EA00F3A297 /* ParameterEncoder.swift */,
 				52920A66248D47EA00F3A297 /* ServiceError.swift */,
@@ -69,6 +78,17 @@
 				5207088D248C4BCF008C9150 /* Info.plist */,
 			);
 			path = Aquino;
+			sourceTree = "<group>";
+		};
+		52DA1D6729A40F2600CAAB31 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				52DA1D6829A40F3200CAAB31 /* URLSessionProtocol.swift */,
+				52DA1D6A29A4109100CAAB31 /* URLSessionDataTaskProtocol.swift */,
+				52DA1D6C29A410AD00CAAB31 /* URLSessionDataTask+Extension.swift */,
+				52DA1D6E29A410BD00CAAB31 /* URLSession+Extension.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		D18CBFFB4BEF6F25195A7C1E /* Frameworks */ = {
@@ -194,7 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DA1D6D29A410AD00CAAB31 /* URLSessionDataTask+Extension.swift in Sources */,
+				52DA1D6929A40F3200CAAB31 /* URLSessionProtocol.swift in Sources */,
 				52920A67248D47EA00F3A297 /* ServiceError.swift in Sources */,
+				52DA1D6B29A4109100CAAB31 /* URLSessionDataTaskProtocol.swift in Sources */,
+				52DA1D6F29A410BD00CAAB31 /* URLSession+Extension.swift in Sources */,
 				52920A63248D47E700F3A297 /* Provider.swift in Sources */,
 				52920A68248D47EA00F3A297 /* ParameterEncoder.swift in Sources */,
 				52920A64248D47E700F3A297 /* ServiceProtocol.swift in Sources */,
@@ -333,7 +357,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = X9469P8892;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -345,7 +369,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.oliveira.Aquino;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -363,7 +387,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = X9469P8892;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -375,7 +399,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.oliveira.Aquino;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
